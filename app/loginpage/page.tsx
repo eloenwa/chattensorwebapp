@@ -42,13 +42,13 @@ function LoginPage() {
         color={'#FFFFFF'}>
         {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
         <VStack >
-          <Box >Sign in with Google</Box>
-          <Box mt={'40px !important'}>or</Box>
+          <Box fontFamily={'Haffer-Regular'}>Sign in with Google</Box>
+          <Box mt={'40px !important'} fontFamily={'Haffer-Regular'}>or</Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <VStack >
-              <Input w={'229px'} h={'39px'} {...register("email")} type={'email'} placeholder='Email' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'47px !important'}></Input>
-              <Input w={'229px'} h={'39px'} {...register("password")} type={'password'} placeholder='Password' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'28px !important'}></Input>
-              <Button type={'submit'} w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} fontSize={'12px'} mt={'28px !important'}>SIGN IN</Button>
+              <Input w={'229px'} h={'39px'} {...register("email")} type={'email'} placeholder='Email' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'47px !important'} fontFamily={'Haffer-Regular'}></Input>
+              <Input w={'229px'} h={'39px'} {...register("password")} type={'password'} placeholder='Password' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'28px !important'} fontFamily={'Haffer-Regular'}></Input>
+              <Button type={'submit'} w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} fontSize={'12px'} mt={'28px !important'} fontFamily={'TT Commons Pro Mono Medium'}>SIGN IN</Button>
             </VStack>
           </form>
         </VStack>

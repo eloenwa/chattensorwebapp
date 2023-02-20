@@ -17,8 +17,8 @@ export default function Home() {
           <HStack fontSize={'12px'} w={'394px'} justifyContent={'space-between'}>
             <Box h={'200px'} w={'187px'} borderWidth={"0.5px"} borderColor={'#707070'} borderRadius={'5px'} >
               {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
-              <VStack>
-                <Text fontSize={'15px'} p={1}>Capabilities</Text>
+              <VStack fontFamily={'Arial'}>
+                <Text fontFamily={'Haffer-Regular'} fontSize={'15px'} p={1}>Capabilities</Text>
                 <VStack fontFamily={'sans-serif arial'} lineHeight='15px'>
                   <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
                   <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
@@ -29,8 +29,8 @@ export default function Home() {
             <Box h={'200px'} w={'187px'} borderWidth={"0.5px"} borderColor={'#707070'} borderRadius={'5px'} >
               {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
               <VStack>
-                <Text fontSize={'15px'} p={1}>Limitation</Text>
-                <VStack fontFamily={'sans-serif arial'} lineHeight='15px'>
+                <Text fontFamily={'Haffer-Regular'} fontSize={'15px'} p={1}>Limitation</Text>
+                <VStack fontFamily={'Arial'} lineHeight='15px'>
                   <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
                   <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
                   <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
@@ -38,7 +38,7 @@ export default function Home() {
               </VStack>
             </Box>
           </HStack>
-          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'}>Access</Button></Link>
+          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} fontWeight={'100'} fontFamily={'TT Commons Pro Mono Medium'}>ACCESS</Button></Link>
         </VStack>
       </Box>
     </>

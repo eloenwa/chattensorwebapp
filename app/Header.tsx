@@ -9,12 +9,12 @@ import React from 'react';
 function Header() {
   return (
     <header >
-      <Box h={'5vh'} bgColor={'#030B19'} pt={10} pl={10} pr={10} color={'#FFFFFF'}>
+      <Box h={'5vh'} bgColor={'#030B19'} pt={5} pl={"80px"} pr={'80px'} color={'#FFFFFF'}>
         {/*@ts-ignore the width and height were altered from the design to appear appropriate*/}
         <HStack justifyContent={'space-between'} >
 
           <Image src='/chattensor.png' w={'120px'} h={'18px'} alt={'chattensor logo'} />
-          <Box>0.00</Box>
+          <Box fontFamily={'Haffer-Regular'} fontSize={'20px'}>0.00</Box>
         </HStack>
 
 
