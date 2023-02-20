@@ -1,91 +1,47 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+'use client'
+import { Box, HStack, VStack, Button, Text } from '@chakra-ui/react';
+import Header from './Header';
+import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] })
+//this is the main page users will be routed here on page load. 
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Header />
+      <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
+        color={'#FFFFFF'}>
+        {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
+        <VStack>
+          <HStack fontSize={'12px'} w={'394px'} justifyContent={'space-between'}>
+            <Box h={'200px'} w={'187px'} borderWidth={"0.5px"} borderColor={'#707070'} borderRadius={'5px'} >
+              {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
+              <VStack>
+                <Text fontSize={'15px'} p={1}>Capabilities</Text>
+                <VStack fontFamily={'sans-serif arial'} lineHeight='15px'>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                </VStack>
+              </VStack>
+            </Box>
+            <Box h={'200px'} w={'187px'} borderWidth={"0.5px"} borderColor={'#707070'} borderRadius={'5px'} >
+              {/* @ts-ignore  this is here because tyscript throws error lines for chakra components like VStack */}
+              <VStack>
+                <Text fontSize={'15px'} p={1}>Limitation</Text>
+                <VStack fontFamily={'sans-serif arial'} lineHeight='15px'>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                  <Text pl={'11px'} pr={'11px'}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</Text>
+                </VStack>
+              </VStack>
+            </Box>
+          </HStack>
+          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'}>Access</Button></Link>
+        </VStack>
+      </Box>
+    </>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   )
 }

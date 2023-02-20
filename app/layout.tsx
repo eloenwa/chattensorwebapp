@@ -1,4 +1,7 @@
-import './globals.css'
+'use client'
+//the use component is neccessary to make use of chakra elememts since it makes use of useState
+
+import { ChakraProvider } from '@chakra-ui/react';
 
 export default function RootLayout({
   children,
@@ -12,7 +15,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+        {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
+        <body>
+          <ChakraProvider>{children}</ChakraProvider>
+          </body>      
     </html>
   )
 }
