@@ -11,12 +11,12 @@ function Header() {
     <header >
       <Box h={'5vh'} bgColor={'#030B19'} pt={5} color={'#FFFFFF'}>
         {/*@ts-ignore the width and height were altered from the design to appear appropriate*/}
-        <HStack justifyContent={'space-between'} >
-          <Box w={'16%'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
+        <HStack w={'100%'} justifyContent={['center', 'space-between']}>
+          <Box w={['fill', '16%']} alignItems={'center'} justifyContent={'center'} display={'flex'} alignSelf={['flex-start', 'center']}>
             <Image src='/chattensor.png' w={'120px'} h={'18px'} alt={'chattensor logo'} />
           </Box>
           <Box w={'16%'} fontFamily={'Haffer-Regular'} fontSize={'20px'}
-            alignItems={'center'} justifyContent={'center'} display={'flex'}><Text>0.00</Text></Box>
+            alignItems={'center'} alignSelf={'end !important'} justifyContent={'center'} display={['none', 'flex']}><Text>0.00</Text></Box>
         </HStack>
 
 
