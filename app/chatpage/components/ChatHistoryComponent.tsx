@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, HStack, Image, Text } from '@chakra-ui/react';
 
 
@@ -11,16 +11,24 @@ interface ChatName {
     chatname: string;
 }
 
+// declare variables for state
+interface ChatHistoryStateVar {
+    editable: boolean;
+}
+
 function ChatHistoryComponent(props: ChatName) {
+
+    const [isEditable, setIsEditable] = useState<ChatHistoryStateVar>({ editable: false });
+
     return (
         <Box>
             <HStack justifyContent={'space-between'} mt={'50px !important'}>
                 <HStack>
                     <Image src='/chaticon.png' alt='stuff' h={'20px'} />
-                    <Text className='text-6xl' fontSize={'12px'} fontFamily={'Haffer-Regular'} mr={'37px !important'}>{props.chatname}</Text>
+                    <Text className='text-6xl' fontSize={'12px'} fontFamily={'Haffer-Regular'} mr={'37px !important'} contentEditable={isEditable.toString()}>{props.chatname}</Text>
                 </HStack>
                 <HStack>
-                    <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
+                    <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} onClick={() => setIsEditable(!isEditable)} />
                     <Image src='/delete.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
                 </HStack>
             </HStack>
