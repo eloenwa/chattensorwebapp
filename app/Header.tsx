@@ -1,4 +1,4 @@
-import { Box, Image, HStack } from '@chakra-ui/react';
+import { Box, Image, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
 
 
@@ -9,12 +9,14 @@ import React from 'react';
 function Header() {
   return (
     <header >
-      <Box h={'5vh'} bgColor={'#030B19'} pt={5} pl={"80px"} pr={'80px'} color={'#FFFFFF'}>
+      <Box h={'5vh'} bgColor={'#030B19'} pt={5} color={'#FFFFFF'}>
         {/*@ts-ignore the width and height were altered from the design to appear appropriate*/}
         <HStack justifyContent={'space-between'} >
-
-          <Image src='/chattensor.png' w={'120px'} h={'18px'} alt={'chattensor logo'} />
-          <Box fontFamily={'Haffer-Regular'} fontSize={'20px'}>0.00</Box>
+          <Box w={'16%'} alignItems={'center'} justifyContent={'center'} display={'flex'}>
+            <Image src='/chattensor.png' w={'120px'} h={'18px'} alt={'chattensor logo'} />
+          </Box>
+          <Box w={'16%'} fontFamily={'Haffer-Regular'} fontSize={'20px'}
+            alignItems={'center'} justifyContent={'center'} display={'flex'}><Text>0.00</Text></Box>
         </HStack>
 
 

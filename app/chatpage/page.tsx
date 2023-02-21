@@ -18,7 +18,7 @@ function ChatPage() {
       <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
         color={'#FFFFFF'}>
         <HStack h={'100%'} w={'100%'}>
-          <Box h={'full'} w={'20%'}>
+          <Box h={'full'} w={'20%'} >
             <VStack>
               <VStack >
                 <Button w={'200px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} onClick={() => setToggle(!Toggle)}>NEW CHAT</Button>
