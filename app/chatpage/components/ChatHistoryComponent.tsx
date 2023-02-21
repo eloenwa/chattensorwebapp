@@ -27,7 +27,7 @@ function ChatHistoryComponent(props: ChatName) {
                     <Image src='/chaticon.png' alt='stuff' h={'20px'} />
                     <Text maxW={'60px'} fontSize={'12px'} whiteSpace={'nowrap'}
                         fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'37px !important'} overflowX={'hidden'}
-                        contentEditable={isEditable.toString()}>{props.chatname}</Text>
+                        contentEditable={isEditable}>{props.chatname}</Text>
                 </HStack>
                 <HStack>
                     <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} onClick={() => setIsEditable(!isEditable)} />
