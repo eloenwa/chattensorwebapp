@@ -18,14 +18,16 @@ interface ChatHistoryStateVar {
 
 function ChatHistoryComponent(props: ChatName) {
 
-    const [isEditable, setIsEditable] = useState<ChatHistoryStateVar>({ editable: false });
+    const [isEditable, setIsEditable] = useState(false);
 
     return (
         <Box>
             <HStack justifyContent={'space-between'} mt={'50px !important'}>
                 <HStack>
                     <Image src='/chaticon.png' alt='stuff' h={'20px'} />
-                    <Text className='text-6xl' fontSize={'12px'} fontFamily={'Haffer-Regular'} mr={'37px !important'} contentEditable={isEditable.toString()}>{props.chatname}</Text>
+                    <Text maxW={'60px'} fontSize={'12px'} whiteSpace={'nowrap'}
+                        fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'37px !important'} overflowX={'hidden'}
+                        contentEditable={isEditable.toString()}>{props.chatname}</Text>
                 </HStack>
                 <HStack>
                     <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} onClick={() => setIsEditable(!isEditable)} />
