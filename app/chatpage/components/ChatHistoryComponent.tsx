@@ -20,8 +20,8 @@ function ChatHistoryComponent(props: ChatName) {
                     <Text className='text-6xl' fontSize={'12px'} fontFamily={'Haffer-Regular'} mr={'37px !important'}>{props.chatname}</Text>
                 </HStack>
                 <HStack>
-                    <Image src='/editicon.png' alt='stuff' h={'20px'} />
-                    <Image src='/delete.png' alt='stuff' h={'20px'} />
+                    <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
+                    <Image src='/delete.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
                 </HStack>
             </HStack>
         </Box>
