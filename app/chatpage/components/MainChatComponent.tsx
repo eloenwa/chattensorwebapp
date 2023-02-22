@@ -13,7 +13,7 @@ function MainChatComponent(props: ChatObj) {
     return (
         <HStack alignItems={'center'} mt={'40px !important'} mb={'40px !important'} overflow={'hidden'}>
             <Box w={'36px'} h={'36px'} bgColor={props.bgcolor} borderRadius={'10px'} />
-            <Box ml={'60px !important'}>{props.text}</Box>
+            <Box ml={'60px !important'} fontFamily={'Haffer-Medium'} fontSize={'16px'}>{props.text}</Box>
         </HStack>
     )
 }
