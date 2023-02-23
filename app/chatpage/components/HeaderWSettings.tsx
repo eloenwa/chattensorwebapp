@@ -1,13 +1,21 @@
 import { Box, Image, HStack, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 
-import TaoLogo from './TAO_white.svg'
+import TaoLogo from '../../TAO_white.svg';
+import SettingsIcon from './settingsicon.svg';
+import SettingsPopUp from './SettingsPopUp';
 
 
-//this component will be called on very page 
+
+
+//this component will be called on the chatpage 
 //also useState will be used to get the users tor credit 
 
 function Header() {
+
+  //state to handle settings drop down menu display
+  const [displaySettingMenu, setDisplaySettingMenu] = useState(false)
+
   return (
     <header >
       <Box h={'5vh'} bgColor={'#030B19'} pt={5} color={'#FFFFFF'}>
@@ -20,9 +28,20 @@ function Header() {
             alignItems={'center'} alignSelf={'end !important'} justifyContent={'center'} display={['none', 'flex']}>
             <Box h={'14px'} display={'flex'} w={'10px'} alignItems={'flex-end'} mr={'2px !important'}><TaoLogo /></Box>
             <Text>0.00</Text>
+            <Box h={'20px'} w={'20px'} display={'flex'} alignItems={'center'} justifyContent={'center'} ml={'17px !important'} _hover={{ borderWidth: '1px' }}
+              onClick={() => setDisplaySettingMenu(!displaySettingMenu)}>
+
+              <SettingsIcon />
+            </Box>
           </Box>
         </HStack>
       </Box>
+      {displaySettingMenu === true ?
+        <>
+          <SettingsPopUp />
+        </>
+        : ''}
+
     </header>
   )
 }
