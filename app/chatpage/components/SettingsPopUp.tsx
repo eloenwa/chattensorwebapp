@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, HStack, Text, Switch, Input } from '@chakra-ui/react';
-
+import { useRouter } from 'next/navigation';
 //drop down menu that displays when the settings button is clicked on the chatpage
 
 
@@ -8,6 +8,17 @@ import { Box, HStack, Text, Switch, Input } from '@chakra-ui/react';
 import LogOutIcon from './logouticon.svg';
 
 function SettingsPopUp() {
+
+    //initialize router to handle page redirects
+    const router = useRouter();
+
+    //This is the authentication function 
+    //this function will post a request to the backend to get a session key and route users to the chatpage upon successfull authentication
+    async function logOutFunc() {
+        console.log('logout'); //data contains email and password details 
+        router.push("/"); //upon authentication this routes users to the chattensor page
+    }
+
     return (
         <Box position={'absolute'} h={'145px'} w={'215px'} zIndex={2} bgColor={'#FFFFFF'} right={'5%'} borderRadius={'20px'} p={2} pl={3} pr={3}>
             <Text fontFamily={'Haffer-Regular'} fontSize={'12px'}>Jacqueline Tasker-Steeves</Text>
@@ -19,7 +30,7 @@ function SettingsPopUp() {
                 <Text justifySelf={'center'} textAlign={'center'} fontFamily={'Haffer-Regular'} fontSize={'10px'} w={'70%'} >Advanced Feedback</Text>
             </Box>
             <HStack mt={'9px !important'} alignItems={'center'} w={'100%'} >
-                <Box h={'18px'} w={'16px'} justifySelf={'start'}>
+                <Box h={'18px'} w={'16px'} justifySelf={'start'} _hover={{ borderWidth: '1px' }} onClick={() => logOutFunc()}>
                     <LogOutIcon />
                 </Box>
                 <Text justifySelf={'center'} textAlign={'center'} fontFamily={'Haffer-Regular'} fontSize={'10px'} w={'70%'} >Log out</Text>

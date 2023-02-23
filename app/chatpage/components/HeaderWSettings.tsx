@@ -19,7 +19,6 @@ function Header() {
   return (
     <header >
       <Box h={'5vh'} bgColor={'#030B19'} pt={5} color={'#FFFFFF'}>
-        {/*@ts-ignore the width and height were altered from the design to appear appropriate*/}
         <HStack w={'100%'} justifyContent={['center', 'space-between']}>
           <Box w={['fill', '16%']} alignItems={'center'} justifyContent={'center'} display={'flex'} alignSelf={['flex-start', 'center']}>
             <Image src='/chattensor.png' w={'120px'} h={'18px'} alt={'chattensor logo'} />
@@ -30,7 +29,6 @@ function Header() {
             <Text>0.00</Text>
             <Box h={'20px'} w={'20px'} display={'flex'} alignItems={'center'} justifyContent={'center'} ml={'17px !important'} _hover={{ borderWidth: '1px' }}
               onClick={() => setDisplaySettingMenu(!displaySettingMenu)}>
-
               <SettingsIcon />
             </Box>
           </Box>
