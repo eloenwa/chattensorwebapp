@@ -5,7 +5,6 @@ import TaoLogo from './TAO_white.svg'
 
 
 //this component will be called on very page 
-//it will use useState to conditional render the settings icon if the user is logged in
 //also useState will be used to get the users tor credit 
 
 function Header() {
