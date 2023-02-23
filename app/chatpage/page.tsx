@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import Header from "../Header";
+import Header from "./components/HeaderWSettings";
 import { Box, HStack, VStack, Button, Input, Image, Textarea } from '@chakra-ui/react';
 
 import ChatHistoryComponent from './components/ChatHistoryComponent';
