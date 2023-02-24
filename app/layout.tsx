@@ -4,7 +4,7 @@
 import * as React from "react"
 
 
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 
 export default function RootLayout({
   children,
@@ -20,7 +20,9 @@ export default function RootLayout({
       <head />
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
-        <ChakraProvider >{children}</ChakraProvider>
+        <ChakraProvider >
+          <Box h={'100%'} pl={'50px'} pr={'80px'} bgColor={'#030B19'}>{children}</Box>
+        </ChakraProvider>
       </body>
     </html>
   )

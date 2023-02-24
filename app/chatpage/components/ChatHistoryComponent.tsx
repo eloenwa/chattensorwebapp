@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Box, HStack, Image, Text } from '@chakra-ui/react';
 
+import DeleteIcon from '../../assets/deleteicon.svg';
+import EditIcon from '../../assets/editicon.svg';
+
 
 
 
@@ -30,8 +33,8 @@ function ChatHistoryComponent(props: ChatName) {
                         contentEditable={isEditable}>{props.chatname}</Text>
                 </HStack>
                 <HStack>
-                    <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} onClick={() => setIsEditable(!isEditable)} />
-                    <Image src='/delete.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
+                    <Box h={'22px'} w={'22px'} opacity={0.5} _hover={{ opacity: 1, borderWidth: '1px', borderColor: '#fff' }} onClick={() => setIsEditable(!isEditable)} ><EditIcon /></Box>
+                    <Box h={'22px'} w={'22px'} opacity={0.5} _hover={{ opacity: 1, borderWidth: '1px', borderColor: '#fff' }}><DeleteIcon /></Box>
                 </HStack>
             </HStack>
         </Box>

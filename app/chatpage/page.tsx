@@ -7,6 +7,8 @@ import { Box, HStack, VStack, Button, Input, Image, Textarea } from '@chakra-ui/
 import ChatHistoryComponent from './components/ChatHistoryComponent';
 import MainChatComponent from './components/MainChatComponent';
 
+import SendIcon from '../assets/sendiconswhite.svg'
+
 function ChatPage() {
 
   //if state is false the chat section won't be displayed 
@@ -18,18 +20,19 @@ function ChatPage() {
       <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
         color={'#FFFFFF'}>
         <HStack h={'100%'} w={'100%'}>
-          <Box h={'full'} w={'20%'} >
+          <Box h={'full'} w={'200px'}>
             <VStack>
               <VStack >
-                <Button w={'200px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} onClick={() => setToggle(!Toggle)}>NEW CHAT</Button>
+                <Button w={'200px'} fontFamily={'TT Commons Pro Mono Regular'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} _hover={{ bg: '#90D7EC' }}
+                  onClick={() => setToggle(!Toggle)}>NEW CHAT</Button>
                 {/* conditionally renders components when new chat is clicked || logic to be added here to make it work more like chat gpt
                 || Array.map (state val) will be called here to populate side bar with chat history*/}
                 {Toggle === true ?
                   <>
                     {/*Since the chat history data is dynamic using a component to render it is appropriate */}
-                    <ChatHistoryComponent chatname='chat 1' />
-                    <ChatHistoryComponent chatname='chat 2' />
-                    <ChatHistoryComponent chatname='chat 3' />
+                    <ChatHistoryComponent chatname='CHAT 1' />
+                    <ChatHistoryComponent chatname='CHAT 2' />
+                    <ChatHistoryComponent chatname='CHAT 3' />
                   </>
                   : NaN}
               </VStack>
@@ -52,7 +55,8 @@ function ChatPage() {
                     _hover={{ borderColor: 'transparent' }} h={'full'} resize={'none'}
                     placeholder='Start a chat' color={'#EBE2E2'} ml={'10px !important'} />
                   {/* Image tag was used to render the icon this will be update to use SVG in the future*/}
-                  <Image src='/testicon.png' alt='send icon' mt={'=5px'} w={"40px"} h={'44px'} onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }} />
+                  {/*<Image src='/testicon.png' alt='send icon' mt={'=5px'} w={"40px"} h={'44px'} onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }} />*/}
+                  <Box w={'35px'} h={'40px'} alignItems={'center'} justifyContent={'center'} onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }}><SendIcon /></Box>
                 </HStack>
               </VStack>
               : ''}
