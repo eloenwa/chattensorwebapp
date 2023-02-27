@@ -20,10 +20,10 @@ function Header() {
 
   return (
     <header >
-      <Box h={'5vh'} pt={5} color={'#FFFFFF'} >
+      <Box h={'7.5vh'} color={'#FFFFFF'} display={'flex'} alignItems={'end'}>
         <HStack w={'100%'} justifyContent={['center', 'space-between']}>
           <Box w={['fill',]} alignItems={'center'} justifyContent={'center'} display={'flex'} alignSelf={['flex-start', 'center']}>
-            <Box w={'200px'} display={'flex'} alignContent={'center'} justifyContent={'center'} ><Box w={'100px'} pt={'5px !important'} h={'27px'} ><ChattensorLogo /></Box></Box>
+            <Box w={'100px'} display={'flex'} alignContent={'center'} justifyContent={'center'} ><Box w={'100px'} pt={'5px !important'} h={'27px'} ><ChattensorLogo /></Box></Box>
           </Box>
           <Box w={'200px'} fontFamily={'TT Commons Pro Mono Regular'} fontSize={'20px'} flexDirection={'row'}
             alignItems={'center'} alignSelf={'end !important'} justifyContent={'end'} display={['none', 'flex']}>
