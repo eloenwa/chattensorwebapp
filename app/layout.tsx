@@ -21,7 +21,7 @@ export default function RootLayout({
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
         <ChakraProvider >
-          <Box h={'100%'} pl={'50px'} pr={'80px'} bgColor={'#030B19'}>{children}</Box>
+          <Box h={'100%'} pl={['10px', '80px']} pr={['10px', '80px']} bgColor={'#030B19'}>{children}</Box>
         </ChakraProvider>
       </body>
     </html>

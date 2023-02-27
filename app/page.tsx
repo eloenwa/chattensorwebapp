@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
+      <Box bgColor={'#030B19'} display={'flex'} height="92.5vh" alignItems={'center'} justifyContent={'center'}
         color={'#FFFFFF'}>
         <VStack >
           <Box display={'flex'} fontSize={'12px'} w={'394px'} justifyContent={'space-between'} flexDir={['column', 'row']} alignItems={'center'}>

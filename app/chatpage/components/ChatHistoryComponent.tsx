@@ -28,8 +28,8 @@ function ChatHistoryComponent(props: ChatName) {
             <HStack justifyContent={'space-between'} mt={'50px !important'}>
                 <HStack>
                     <Image src='/chaticon.png' alt='stuff' h={'20px'} />
-                    <Text maxW={'60px'} fontSize={'12px'} whiteSpace={'nowrap'}
-                        fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'37px !important'} overflowX={'hidden'}
+                    <Text maxW={'75px'} fontSize={'12px'} whiteSpace={'nowrap'}
+                        fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'5px !important'} overflowX={'hidden'}
                         contentEditable={isEditable}>{props.chatname}</Text>
                 </HStack>
                 <HStack>

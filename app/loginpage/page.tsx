@@ -36,7 +36,7 @@ function LoginPage() {
   return (
     <>
       <Header />
-      <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
+      <Box bgColor={'#030B19'} display={'flex'} height="92.5vh" alignItems={'center'} justifyContent={'center'}
         color={'#FFFFFF'}>
         <VStack >
           {/* wrap the box below in a button that triggers oauth (google) sign */}
