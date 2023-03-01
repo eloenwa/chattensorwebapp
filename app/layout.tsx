@@ -4,7 +4,15 @@
 import * as React from "react"
 
 
-import { ChakraProvider, Box } from '@chakra-ui/react';
+import { ChakraProvider, Box, extendTheme } from '@chakra-ui/react';
+import Fonts from './components/fonts';
+
+
+const theme = extendTheme({
+  fonts: {
+    body: `'TT Commons Pro Mono Regular','Haffer-Regular'`
+  }
+})
 
 export default function RootLayout({
   children,
@@ -20,7 +28,8 @@ export default function RootLayout({
       <head />
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
-        <ChakraProvider >
+        <ChakraProvider theme={theme}>
+          <Fonts />
           <Box h={'100%'} pl={['10px', '80px']} pr={['10px', '80px']} bgColor={'#030B19'}>{children}</Box>
         </ChakraProvider>
       </body>

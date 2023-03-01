@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import SettingsPopUp from './SettingsPopUp';
 
-import TaoLogo from '../../TAO_white.svg';
+import TaoLogo from '../../assets/TAO_white.svg';
 import SettingsIcon from './settingsicon.svg';
 import ChattensorLogo from '../../assets/chattensorwhite.svg'
 

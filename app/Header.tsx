@@ -1,7 +1,7 @@
-import { Box, Image, HStack, Text } from '@chakra-ui/react';
+import { Box, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
 
-import TaoLogo from './TAO_white.svg';
+import TaoLogo from './assets/TAO_white.svg';
 import ChattensorLogo from './assets/chattensorwhite.svg'
 
 

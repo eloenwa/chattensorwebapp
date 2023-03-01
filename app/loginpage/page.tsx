@@ -40,13 +40,13 @@ function LoginPage() {
         color={'#FFFFFF'}>
         <VStack >
           {/* wrap the box below in a button that triggers oauth (google) sign */}
-          <Box fontFamily={'TT Commons Pro Mono Medium'}>Sign in with Google</Box>
+          <Box fontWeight={'700'} fontFamily={'Haffer-Regular'}>Sign in with Google</Box>
           <Box mt={'40px !important'} fontFamily={'Haffer-Regular'}>OR</Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <VStack >
               <Input w={'229px'} h={'39px'} {...register("email")} type={'email'} placeholder='EMAIL' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'47px !important'} fontFamily={'Haffer-Regular'}></Input>
               <Input w={'229px'} h={'39px'} {...register("password")} type={'password'} placeholder='PASSWORD' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'28px !important'} fontFamily={'Haffer-Regular'}></Input>
-              <Button type={'submit'} w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} fontSize={'12px'} mt={'28px !important'} fontFamily={'TT Commons Pro Mono Medium'} fontWeight={200}>SIGN IN</Button>
+              <Button type={'submit'} w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} fontSize={'12px'} mt={'28px !important'} fontWeight={'700'} fontFamily={'Haffer-Regular'}>SIGN IN</Button>
             </VStack>
           </form>
         </VStack>
