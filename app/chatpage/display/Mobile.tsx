@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, HStack, VStack, Input, Text } from '@chakra-ui/react';
 import HeaderWHamburgerMenu from '../components/HeaderWHamburgerMenu';
 
+
+
 //This mobile view would have a hamburger icon 
 //hamburger icon would be created using the Drawer element from Chakra UI to give it an animation when it is open/closed
 
