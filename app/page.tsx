@@ -35,7 +35,7 @@ export default function Home() {
               </VStack>
             </Box>
           </Box>
-          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} fontWeight={'700'} fontFamily={'Haffer-Regular'}>ACCESS</Button></Link>
+          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} fontFamily={'TT Commons Pro Mono Medium'}>ACCESS</Button></Link>
         </VStack>
       </Box>
     </>
