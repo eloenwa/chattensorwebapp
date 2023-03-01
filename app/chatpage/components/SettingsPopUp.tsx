@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 
 //SVG import 
-import LogOutIcon from './logouticon.svg';
+import LogOutIcon from '../../assets/logouticon.svg'
 
 function SettingsPopUp() {
 
