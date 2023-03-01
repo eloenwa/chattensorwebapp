@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Box, HStack, Image, Text } from '@chakra-ui/react';
+import { Box, Center, HStack, Image, Text } from '@chakra-ui/react';
 
+import DeleteIcon from '../../assets/deleteicon.svg';
+import EditIcon from '../../assets/editicon.svg';
+import ChatIcon from '../../assets/chaticon.svg';
 
 
 
@@ -22,16 +25,21 @@ function ChatHistoryComponent(props: ChatName) {
 
     return (
         <Box>
-            <HStack justifyContent={'space-between'} mt={'50px !important'}>
-                <HStack>
-                    <Image src='/chaticon.png' alt='stuff' h={'20px'} />
-                    <Text maxW={'60px'} fontSize={'12px'} whiteSpace={'nowrap'}
-                        fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'37px !important'} overflowX={'hidden'}
+            <HStack justifyContent={'space-between'} mt={'50px !important'} alignItems={'center'}>
+                <HStack alignItems={'center'}>
+                    <Box h={'22px'} w={'22px'} pt={0.5}>
+                        <ChatIcon />
+                    </Box>
+
+                    <Text maxW={'75px'} fontSize={'12px'} whiteSpace={'nowrap'}
+                        fontFamily={'Haffer-Regular'} textOverflow={'clip'} mr={'5px !important'} overflowX={'hidden'}
                         contentEditable={isEditable}>{props.chatname}</Text>
                 </HStack>
-                <HStack>
-                    <Image src='/editicon.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} onClick={() => setIsEditable(!isEditable)} />
-                    <Image src='/delete.png' alt='stuff' h={'20px'} opacity={0.5} _hover={{ opacity: 1 }} />
+                <HStack alignItems={'center'}>
+                    <Box h={'22px'} w={'22px'} opacity={0.5} _hover={{ opacity: 1, borderWidth: '1px', borderColor: '#fff' }} onClick={() => setIsEditable(!isEditable)} >
+                        <EditIcon />
+                    </Box>
+                    <Box h={'22px'} w={'22px'} opacity={0.5} _hover={{ opacity: 1, borderWidth: '1px', borderColor: '#fff' }}><DeleteIcon /></Box>
                 </HStack>
             </HStack>
         </Box>

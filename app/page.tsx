@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Box bgColor={'#030B19'} display={'flex'} height="95vh" alignItems={'center'} justifyContent={'center'}
-        color={'#FFFFFF'}>
+      <Box bgColor={'#030B19'} display={'flex'} height="92.5vh" alignItems={'center'} justifyContent={'center'}
+        color={'#FFFFFF'} w={'100%'}>
         <VStack >
           <Box display={'flex'} fontSize={'12px'} w={'394px'} justifyContent={'space-between'} flexDir={['column', 'row']} alignItems={'center'}>
             <Box h={'200px'} w={'187px'} borderWidth={"0.5px"} borderColor={'#707070'} borderRadius={'5px'} mt={'10px !important'}>
@@ -35,7 +35,7 @@ export default function Home() {
               </VStack>
             </Box>
           </Box>
-          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} fontWeight={'100'} fontFamily={'TT Commons Pro Mono Medium'}>ACCESS</Button></Link>
+          <Link href='/loginpage'><Button w={'215px'} h={'42px'} borderRadius={'20px'} bgColor={'#000000'} mt={'20.8px'} fontSize={'12px'} fontFamily={'TT Commons Pro Mono Medium'}>ACCESS</Button></Link>
         </VStack>
       </Box>
     </>
