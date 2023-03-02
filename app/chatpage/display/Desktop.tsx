@@ -62,12 +62,13 @@ function Desktop() {
                                 </Box>
                                 <HStack color={'white'} bgColor={'#030B19'} w={'100%'} h={'69px'} position={'sticky'} bottom={'0px'} mb={'30px !important'} borderWidth={'0.5px'}
                                     alignItems={'center'} borderColor={'#F7F4F4'} borderRadius={"10px"} ml={'38px !important'} mr={'38px !important'} >
-                                    <Input w={'95%'} borderColor={'transparent'} focusBorderColor='transparent'
+                                    <Input w={'full'} borderColor={'transparent'} focusBorderColor='transparent'
                                         _hover={{ borderColor: 'transparent' }} h={'full'} resize={'none'}
                                         placeholder='Start a chat' color={'#EBE2E2'} ml={'10px !important'} />
                                     {/* Image tag was used to render the icon this will be update to use SVG in the future*/}
                                     {/*<Image src='/testicon.png' alt='send icon' mt={'=5px'} w={"40px"} h={'44px'} onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }} />*/}
-                                    <Box w={'35px'} h={'40px'} alignItems={'center'} justifyContent={'center'} onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }}><SendIcon /></Box>
+                                    <Box w={'35px'} h={'40px'} alignItems={'center'} justifyContent={'center'}
+                                        onClick={() => console.log('click!')} opacity={0.5} _hover={{ opacity: 1 }} mr={'20px !important'} mb={'-10px !important'} ><SendIcon /></Box>
                                 </HStack>
                             </VStack>
                             : ''}
