@@ -21,8 +21,8 @@ function SettingsPopUp() {
 
     return (
         <Box position={'absolute'} h={'145px'} w={'215px'} zIndex={2} bgColor={'#FFFFFF'} right={'2%'} top={'8%'} borderRadius={'20px'} p={2} pl={3} pr={3}>
-            <Text fontFamily={'Haffer-Regular'} fontSize={'12px'}>Jacqueline Tasker-Steeves</Text>
-            <Text fontFamily={'Haffer-Regular'} fontSize={'8px'} mt={'9px !important'}>jacquelinedawnts@gmail.com</Text>
+            <Text fontFamily={'Haffer-Regular'} fontSize={'12px'}>John Doe</Text>
+            <Text fontFamily={'Haffer-Regular'} fontSize={'8px'} mt={'9px !important'}>johndoe@gmail.com</Text>
             <Input h={'22px'} fontFamily={'Haffer-Regular'} fontSize={'10px'} textAlign={'center'} color={'#000000'} placeholder='Enter UID'
                 borderRadius={'4px'} borderWidth={'0.5px'} borderColor={'#02020261'} mt={'10px !important'} />
             <Box mt={'9px !important'} alignItems={'center'} width={'100%'} display={'flex'} flexDir={'row'}>

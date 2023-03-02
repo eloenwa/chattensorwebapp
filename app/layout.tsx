@@ -10,7 +10,7 @@ import Fonts from './components/fonts';
 
 const theme = extendTheme({
   fonts: {
-    body: `'TT Commons Pro Mono Regular','Haffer-Regular'`
+    body: `'Haffer-Regular','TT Commons Pro Mono Regular'`
   }
 })
 
@@ -28,9 +28,9 @@ export default function RootLayout({
       <head />
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
-        <ChakraProvider theme={theme}>
+        <ChakraProvider theme={theme} >
           <Fonts />
-          <Box h={'100%'} pl={['10px', '80px']} pr={['10px', '80px']} bgColor={'#030B19'}>{children}</Box>
+          <Box h={'100vh'} pl={['0px', '80px']} pr={['0px', '80px']} bgColor={'#030B19'}>{children}</Box>
         </ChakraProvider>
       </body>
     </html>
