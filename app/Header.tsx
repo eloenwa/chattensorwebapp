@@ -11,7 +11,7 @@ import ChattensorLogo from './assets/chattensorwhite.svg'
 function Header() {
   return (
     <header >
-      <Box h={'7.5vh'} color={'#FFFFFF'} display={'flex'} alignItems={'end'}>
+      <Box h={['5vh', '7.5vh']} color={'#FFFFFF'} display={'flex'} alignItems={'end'} >
         <HStack w={'100%'} justifyContent={['center', 'space-between']}>
           <Box w={['fill',]} alignItems={'center'} justifyContent={'center'} display={'flex'} alignSelf={['flex-start', 'center']}>
             <Box w={'100px'} display={'flex'} alignContent={'center'} justifyContent={'center'} ><Box w={'100px'} pt={'5px !important'} h={'27px'} ><ChattensorLogo /></Box></Box>

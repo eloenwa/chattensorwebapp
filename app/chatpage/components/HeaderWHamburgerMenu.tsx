@@ -59,8 +59,8 @@ function HeaderWHamburgerMenu() {
                         <ChatHistoryComponentM chatname='CHAT 1' />
                     </DrawerBody>
                     <DrawerFooter display={'flex'} flexDir={'column'} alignItems={'flex-start'}>
-                        <Text fontFamily={'Haffer-Regular'} fontSize={'18px'}>Jacqueline Tasker-Steeves</Text>
-                        <Text fontFamily={'Haffer-Regular'} fontSize={'12px'}>jacquelinedawnts@gmail.com</Text>
+                        <Text fontFamily={'Haffer-Regular'} fontSize={'18px'}>John Doe</Text>
+                        <Text fontFamily={'Haffer-Regular'} fontSize={'12px'}>johndoe@gmail.com</Text>
                         <Box mt={'30px !important'} alignItems={'center'} width={'100%'} display={'flex'} flexDir={'row'}>
                             <Switch size={'sm'} justifySelf={'flex-start'} />
                             <Text ml={'15px !important'} fontFamily={'Haffer-Regular'} fontSize={'12px'} w={'70%'} >ADVANCED FEATURES</Text>
