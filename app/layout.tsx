@@ -8,11 +8,17 @@ import { ChakraProvider, Box, extendTheme } from '@chakra-ui/react';
 import Fonts from './components/fonts';
 
 
+import { Auth0Provider } from '@auth0/auth0-react';
+import { ChatProvider } from './contexts/chat';
+
+
 const theme = extendTheme({
   fonts: {
     body: `'Haffer-Regular','TT Commons Pro Mono Regular'`
   }
 })
+
+console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID)
 
 export default function RootLayout({
   children,
@@ -28,10 +34,15 @@ export default function RootLayout({
       <head />
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
-        <ChakraProvider theme={theme} >
-          <Fonts />
-          <Box h={'100vh'} pl={['0px', '80px']} pr={['0px', '80px']} bgColor={'#030B19'}>{children}</Box>
-        </ChakraProvider>
+
+        <Auth0Provider domain={`${process.env.NEXT_PUBLIC_OAUTH_DOMAIN}`} clientId={`${process.env.NEXT_PUBLIC_OAUTH_ID}`} >
+          {/** <ChatProvider> */}
+          <ChakraProvider theme={theme} >
+            <Fonts />
+            <Box h={'100vh'} pl={['0px', '80px']} pr={['0px', '80px']} bgColor={'#030B19'}>{children}</Box>
+          </ChakraProvider>
+          {/** </ChatProvider> */}
+        </Auth0Provider >
       </body>
     </html>
   )
