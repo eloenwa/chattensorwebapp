@@ -9,7 +9,7 @@ import Fonts from './components/fonts';
 
 
 import { Auth0Provider } from '@auth0/auth0-react';
-import { ChatProvider } from './contexts/chat';
+//import { ChatProvider } from './contexts/chat';
 
 
 const theme = extendTheme({
