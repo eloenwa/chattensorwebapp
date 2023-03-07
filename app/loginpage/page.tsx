@@ -1,10 +1,11 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "../Header";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Box, VStack, Button, Input } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
+import { useAuth0 } from '@auth0/auth0-react';
 
 //define the input types for the sign in form
 interface IFormInput {
@@ -31,6 +32,18 @@ function LoginPage() {
     router.push("/chatpage"); //upon authentication this routes users to the chattensor page
   }
 
+  //this is the authentication function for google oauth
+  const { loginWithPopup, logout, user, isAuthenticated } = useAuth0();
+
+  //this useEffect function will check if the user is authenticated and if they are it will route them to the chatpage
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push("/chatpage"); //upon authentication this routes users to the chattensor page
+    } else {      //if the user is not authenticated it will do nothing   
+    }
+  }, [isAuthenticated])
+
+
 
 
   return (
@@ -40,8 +53,10 @@ function LoginPage() {
         color={'#FFFFFF'}>
         <VStack >
           {/* wrap the box below in a button that triggers oauth (google) sign */}
-          <Box fontFamily={'TT Commons Pro Mono Medium'}>Sign in with Google</Box>
-          <Box mt={'40px !important'} fontFamily={'Haffer-Regular'}>OR</Box>
+          <Button bgColor={'transparent'} _hover={{ 'backgroundColor': '#90D7EC' }} onClick={loginWithPopup}>
+            <Box fontFamily={'TT Commons Pro Mono Medium'}>Sign in with Google</Box>
+          </Button>
+          <Box mt={'40px !important'} fontFamily={'Haffer-Regular'} >OR</Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <VStack >
               <Input w={'229px'} h={'39px'} {...register("email")} type={'email'} placeholder='EMAIL' textAlign={'center'} fontSize={'12px'} borderColor={'#FFFFFF61'} mt={'47px !important'} fontFamily={'Haffer-Regular'}></Input>

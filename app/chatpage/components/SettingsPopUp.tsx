@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, HStack, Text, Switch, Input } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
+import { useAuth0 } from '@auth0/auth0-react';
+
 //drop down menu that displays when the settings button is clicked on the chatpage
 
 
@@ -9,12 +11,16 @@ import LogOutIcon from '../../assets/logouticon.svg'
 
 function SettingsPopUp() {
 
+
+    const { logout } = useAuth0();
+
     //initialize router to handle page redirects
     const router = useRouter();
 
     //This is the authentication function 
     //this function will post a request to the backend to get a session key and route users to the chatpage upon successfull authentication
     async function logOutFunc() {
+        logout()
         console.log('logout'); //data contains email and password details 
         router.push("/"); //upon authentication this routes users to the chattensor page
     }

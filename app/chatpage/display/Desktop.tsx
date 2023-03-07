@@ -50,7 +50,6 @@ function Desktop() {
                                     }, '&::-webkit-scrollbar-thumb': {
                                         background: '#90D7EC',
                                         borderRadius: '5px',
-
                                     },
                                 }}>
                                     {/*Since the conversation history data is dynamic using a component to render it is appropriate || this will be tied to a state that updates with input 

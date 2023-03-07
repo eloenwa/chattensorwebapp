@@ -19,6 +19,7 @@ function Header() {
           <Box w={'200px'} fontFamily={'TT Commons Pro Mono Regular'} fontSize={'20px'} flexDirection={'row'}
             alignItems={'center'} alignSelf={'end !important'} justifyContent={'end'} display={['none', 'flex']}>
             <Box h={'14px'} display={'flex'} w={'10px'} alignItems={'flex-end'} mr={'2px !important'}><TaoLogo /></Box>
+            {/* this will be a state value that will be updated with the users tor credit */}
             <Text >0.00</Text>
           </Box>
         </HStack>
