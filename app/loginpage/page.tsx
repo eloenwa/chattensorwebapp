@@ -53,7 +53,7 @@ function LoginPage() {
         color={'#FFFFFF'}>
         <VStack >
           {/* wrap the box below in a button that triggers oauth (google) sign */}
-          <Button bgColor={'transparent'} _hover={{ 'backgroundColor': '#90D7EC' }} onClick={(event) => loginWithPopup}>
+          <Button bgColor={'transparent'} _hover={{ 'backgroundColor': '#90D7EC' }} onClick={() => { loginWithPopup() }}>
             <Box fontFamily={'TT Commons Pro Mono Medium'}>Sign in with Google</Box>
           </Button>
           <Box mt={'40px !important'} fontFamily={'Haffer-Regular'} >OR</Box>
