@@ -35,7 +35,7 @@ export default function RootLayout({
       {/*wraps all components with chakra provider this let's us use chakra elements in our subcomponents*/}
       <body>
 
-        <Auth0Provider domain={process.env.NEXT_PUBLIC_OAUTH_DOMAIN} clientId={process.env.NEXT_PUBLIC_OAUTH_ID} redirectUri={window.location.origin} >
+        <Auth0Provider domain={`${process.env.NEXT_PUBLIC_OAUTH_DOMAIN}`} clientId={`${process.env.NEXT_PUBLIC_OAUTH_ID}`} >
           {/** <ChatProvider> */}
           <ChakraProvider theme={theme} >
             <Fonts />
